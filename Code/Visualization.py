@@ -2,13 +2,14 @@ import mysql.connector
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# Connect to MySQL
 conn = mysql.connector.connect(
     host='localhost',
     user='root',
     password='avatar',
     database='db'
 )
+
+### Code Started
 
 ### Visualization 1: Top-Selling Products by Quantity ###
 query_top_products = """
@@ -29,6 +30,8 @@ plt.xticks(rotation=45)
 plt.tight_layout()
 plt.show()
 
+
+
 ### Visualization 2: Top-Selling Products by Revenue ###
 query_top_revenue_products = """
 SELECT ProductID, SUM(QuantityOrdered * TotalRetailPriceforThisOrder) AS TotalRevenue
@@ -47,6 +50,8 @@ plt.ylabel('Total Revenue')
 plt.xticks(rotation=45)
 plt.tight_layout()
 plt.show()
+
+
 
 ### Visualization 3: Monthly Sales Trends ###
 query_monthly_sales = """
@@ -70,6 +75,8 @@ plt.grid(True)
 plt.tight_layout()
 plt.show()
 
+
+
 ### Visualization 4: Product Counts by Category ###
 query_product_counts = """
 SELECT `Product Category`, COUNT(*) AS ProductCount
@@ -87,6 +94,8 @@ plt.ylabel('Count of Products')
 plt.xticks(rotation=45)
 plt.tight_layout()
 plt.show()
+
+
 
 ### Visualization 5: Top Customers by Total Purchases ###
 query_top_customers = """
@@ -107,5 +116,6 @@ plt.xticks(rotation=45)
 plt.tight_layout()
 plt.show()
 
-# Close the database connection
 conn.close()
+
+### Code Ended
