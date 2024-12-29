@@ -1,6 +1,5 @@
 import mysql.connector
 
-# Connect to MySQL
 conn = mysql.connector.connect(
     host='localhost',
     user='root',
@@ -9,7 +8,6 @@ conn = mysql.connector.connect(
 )
 cursor = conn.cursor()
 
-# Query for sales trends by month
 query_monthly_sales_trend = """
 SELECT 
     YEAR(`Date Order was placed`) AS Year,
@@ -25,6 +23,5 @@ print("Monthly Sales Trend:")
 for row in monthly_sales_trend:
     print(f"Total Sales: ${row[2]:,.2f}")
 
-# Close the connection
 cursor.close()
 conn.close()
