@@ -1,6 +1,6 @@
 
 <h1 align="center">Hi I'm Sumedh Dubey</h1>
-- This repository contains the completed work for Task ID: TW-SUM-24/TSK-#DA1. [Data Analytics](https://github.com/sumedhgh29/TW-SUM-24-TSK--DA1)
+This repository contains the completed work for Task ID: TW-SUM-24/TSK-#DA1. [Data Analytics](https://github.com/sumedhgh29/TW-SUM-24-TSK--DA1)
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
